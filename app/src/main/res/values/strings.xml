@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Invoice Discounter</string>
+    <string name="subtotalText">Subtotal</string>
+    <string name="discountPercentText">Discount %</string>
+    <string name="discountAmtText">Discount Amount</string>
+    <string name="totalText">Total</string>
+    <string name="percentAmount">0</string>
+    <string name="discountAmt" />
+    <string name="subtotal" />
+    <string name="total" />
+    <string name="minusButtonText">-</string>
+    <string name="plusButtonText">+</string>
+    <string name="subtotalHint">Enter Subtotal</string>
+</resources>
