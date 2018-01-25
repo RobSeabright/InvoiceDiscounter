@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,153 +8,123 @@
 
     <EditText
         android:id="@+id/subtotal"
-        android:layout_width="0dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:hint="@string/subtotalHint"
-        android:inputType="numberDecimal"
-        android:singleLine="false"
-        app:layout_constraintBottom_toBottomOf="@+id/subtotalText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/subtotalText"
-        app:layout_constraintTop_toTopOf="@+id/subtotalText"
-        tools:text="@string/subtotal" />
-
-    <TextView
-        android:id="@+id/totalText"
-        android:layout_width="70dp"
-        android:layout_height="27dp"
-        android:layout_marginBottom="127dp"
-        android:layout_marginStart="37dp"
-        android:text="@string/totalText"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="@string/totalText"
-        android:layout_marginLeft="37dp" />
-
-    <TextView
-        android:id="@+id/discountAmtText"
         android:layout_width="wrap_content"
-        android:layout_height="33dp"
-        android:layout_marginBottom="49dp"
-        android:text="@string/discountAmtText"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/totalText"
-        app:layout_constraintStart_toStartOf="@+id/totalText"
-        tools:text="@string/discountAmtText" />
-
-    <TextView
-        android:id="@+id/discountPercentText"
-        android:layout_width="128dp"
-        android:layout_height="33dp"
-        android:text="@string/discountPercentText"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/percentAmt"
-        app:layout_constraintStart_toStartOf="@+id/discountAmtText"
-        app:layout_constraintTop_toTopOf="@+id/percentAmt"
-        tools:text="@string/discountPercentText" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="77dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/subtotal"
+        tools:text="@string/subtotal" />
 
     <TextView
         android:id="@+id/subtotalText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="91dp"
-        android:clickable="false"
+        android:layout_alignBottom="@+id/subtotal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:text="@string/subtotalText"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/subtotal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/subtotalText"
-        android:layout_marginRight="84dp"
-        android:layout_marginLeft="37dp" />
+        android:textSize="30sp"
+        tools:text="@string/subtotalText" />
+
+    <TextView
+        android:id="@+id/discountPercentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/subtotalText"
+        android:layout_marginTop="57dp"
+        android:text="@string/discountPercentText"
+        android:textSize="30sp"
+        tools:text="@string/discountPercentText" />
 
     <TextView
         android:id="@+id/percentAmt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="57dp"
-        android:layout_marginStart="184dp"
+        android:layout_alignBaseline="@+id/discountPercentText"
+        android:layout_alignBottom="@+id/discountPercentText"
+        android:layout_toLeftOf="@+id/plusButton"
+        android:layout_toStartOf="@+id/plusButton"
         android:text="@string/percentAmount"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/minusButtion"
-        app:layout_constraintEnd_toStartOf="@+id/minusButtion"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/minusButtion"
-        tools:text="@string/percentAmount"
-        android:layout_marginRight="57dp"
-        android:layout_marginLeft="184dp" />
-
-    <TextView
-        android:id="@+id/discountAmt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="22dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/discountAmt"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/discountAmtText"
-        app:layout_constraintEnd_toEndOf="@+id/minusButtion"
-        app:layout_constraintStart_toEndOf="@+id/discountAmtText"
-        app:layout_constraintTop_toTopOf="@+id/discountAmtText"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="@string/discountAmt" />
-
-    <Button
-        android:id="@+id/plusButton"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="50dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="46dp"
-        android:text="@string/plusButtonText"
-        app:layout_constraintBottom_toTopOf="@+id/discountAmt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/minusButtion"
-        app:layout_constraintTop_toBottomOf="@+id/subtotal"
-        tools:text="@string/plusButtonText"
-        android:layout_marginRight="16dp" />
+        android:textSize="30sp"
+        tools:text="@string/percentAmount" />
 
     <Button
         android:id="@+id/minusButtion"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="17dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/subtotal"
+        android:layout_alignStart="@+id/subtotal"
+        android:layout_below="@+id/percentAmt"
+        android:layout_marginTop="21dp"
         android:text="@string/minusButtonText"
-        app:layout_constraintBottom_toBottomOf="@+id/plusButton"
-        app:layout_constraintEnd_toStartOf="@+id/plusButton"
-        app:layout_constraintStart_toEndOf="@+id/percentAmt"
-        app:layout_constraintTop_toTopOf="@+id/plusButton"
-        tools:text="@string/minusButtonText"
-        android:layout_marginRight="17dp" />
+        tools:text="@string/minusButtonText" />
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/minusButtion"
+        android:layout_alignEnd="@+id/subtotal"
+        android:layout_alignRight="@+id/subtotal"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/plusButtonText"
+        tools:text="@string/plusButtonText" />
+
+    <TextView
+        android:id="@+id/discountAmtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/discountPercentText"
+        android:layout_alignStart="@+id/discountPercentText"
+        android:layout_below="@+id/minusButtion"
+        android:layout_marginTop="83dp"
+        android:text="@string/discountAmtText"
+        android:textSize="30sp"
+        tools:text="@string/discountAmtText" />
+
+    <TextView
+        android:id="@+id/discountAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/discountAmtText"
+        android:layout_marginBottom="8dp"
+        android:layout_toEndOf="@+id/percentAmt"
+        android:layout_toRightOf="@+id/percentAmt"
+        android:text="@string/discountAmt"
+        android:textSize="30sp"
+        tools:text="@string/discountAmt" />
+
+    <TextView
+        android:id="@+id/totalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/discountAmtText"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/totalText"
+        android:textSize="30sp"
+        tools:text="@string/totalText" />
 
     <TextView
         android:id="@+id/total"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="@string/total"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/totalText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/discountAmt"
-        app:layout_constraintTop_toTopOf="@+id/totalText"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="@string/total" />
-
-    <TextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="130dp"
-        android:text="@string/subtotal"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="371dp"
-        tools:text="@string/subtotal" />
-
-</android.support.constraint.ConstraintLayout>
+        android:layout_alignBottom="@+id/totalText"
+        android:layout_toLeftOf="@+id/discountAmt"
+        android:layout_toStartOf="@+id/discountAmt"
+        android:text="@string/total"
+        android:textSize="30sp"
+        tools:text="@string/total" />
+</RelativeLayout>

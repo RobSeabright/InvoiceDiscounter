@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -52,14 +54,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void performMaths() {
-        percentAmountView.setText(String.valueOf(discountPercent));
-
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
         String discountAmountText = subtotalView.getText().toString();
 
-        double discountAmount = Double.parseDouble(discountAmountText);
-        discountAmount *= (discountPercent / 100);
-        discountAmountView.setText(String.valueOf(Math.round(discountAmount * 100.0) / 100.0));
-        totalView.setText(String.valueOf(Double.parseDouble(subtotalView.getText().toString()) - discountAmount));
+        discountAmountView.setText(currency.format(Double.parseDouble(discountAmountText) * (discountPercent / 100)));
+        percentAmountView.setText(String.valueOf(discountPercent));
+        totalView.setText(currency.format(Double.parseDouble(subtotalView.getText().toString()) - Double.parseDouble(discountAmountText) * (discountPercent / 100)));
     }
 
 }
