@@ -2,7 +2,7 @@
     <string name="app_name">Invoice Discounter</string>
     <string name="subtotalText">Subtotal</string>
     <string name="discountPercentText">Discount %</string>
-    <string name="discountAmtText">Discount Amount</string>
+    <string name="discountAmtText">Discount Amt</string>
     <string name="totalText">Total</string>
     <string name="percentAmount">0</string>
     <string name="discountAmt" />

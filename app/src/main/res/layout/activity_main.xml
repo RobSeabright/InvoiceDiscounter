@@ -1,130 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.rob.invoicediscounter.MainActivity">
 
-    <EditText
-        android:id="@+id/subtotal"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginTop="77dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="@string/subtotal"
-        tools:text="@string/subtotal" />
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/subtotalText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/subtotal"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:text="@string/subtotalText"
-        android:textSize="30sp"
-        tools:text="@string/subtotalText" />
+        <TextView
+            android:id="@+id/subtotalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/subtotalText"
+            android:textSize="30sp"
+            tools:text="@string/subtotalText" />
 
-    <TextView
-        android:id="@+id/discountPercentText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/subtotalText"
-        android:layout_marginTop="57dp"
-        android:text="@string/discountPercentText"
-        android:textSize="30sp"
-        tools:text="@string/discountPercentText" />
+        <EditText
+            android:id="@+id/subtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/subtotalHint"
+            android:inputType="numberDecimal"
+            android:text="@string/subtotal"
+            tools:text="@string/subtotal" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/percentAmt"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/discountPercentText"
-        android:layout_alignBottom="@+id/discountPercentText"
-        android:layout_toLeftOf="@+id/plusButton"
-        android:layout_toStartOf="@+id/plusButton"
-        android:text="@string/percentAmount"
-        android:textSize="30sp"
-        tools:text="@string/percentAmount" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/minusButtion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/subtotal"
-        android:layout_alignStart="@+id/subtotal"
-        android:layout_below="@+id/percentAmt"
-        android:layout_marginTop="21dp"
-        android:text="@string/minusButtonText"
-        tools:text="@string/minusButtonText" />
+        <TextView
+            android:id="@+id/discountPercentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/discountPercentText"
+            android:textSize="30sp"
+            tools:text="@string/discountPercentText" />
 
-    <Button
-        android:id="@+id/plusButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/minusButtion"
-        android:layout_alignEnd="@+id/subtotal"
-        android:layout_alignRight="@+id/subtotal"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/plusButtonText"
-        tools:text="@string/plusButtonText" />
+        <TextView
+            android:id="@+id/percentAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/percentAmount"
+            android:textSize="30sp"
+            tools:text="@string/percentAmount" />
 
-    <TextView
-        android:id="@+id/discountAmtText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/discountPercentText"
-        android:layout_alignStart="@+id/discountPercentText"
-        android:layout_below="@+id/minusButtion"
-        android:layout_marginTop="83dp"
-        android:text="@string/discountAmtText"
-        android:textSize="30sp"
-        tools:text="@string/discountAmtText" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/discountAmt"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/discountAmtText"
-        android:layout_marginBottom="8dp"
-        android:layout_toEndOf="@+id/percentAmt"
-        android:layout_toRightOf="@+id/percentAmt"
-        android:text="@string/discountAmt"
-        android:textSize="30sp"
-        tools:text="@string/discountAmt" />
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/totalText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/discountAmtText"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="75dp"
-        android:text="@string/totalText"
-        android:textSize="30sp"
-        tools:text="@string/totalText" />
+        <Button
+            android:id="@+id/minusButtion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/minusButtonText"
+            tools:text="@string/minusButtonText" />
 
-    <TextView
-        android:id="@+id/total"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/plusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/plusButtonText"
+            tools:text="@string/plusButtonText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/totalText"
-        android:layout_toLeftOf="@+id/discountAmt"
-        android:layout_toStartOf="@+id/discountAmt"
-        android:text="@string/total"
-        android:textSize="30sp"
-        tools:text="@string/total" />
-</RelativeLayout>
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/discountAmtText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/discountAmtText"
+            android:textSize="30sp"
+            tools:text="@string/discountAmtText" />
+
+        <TextView
+            android:id="@+id/discountAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/discountAmt"
+            android:textSize="30sp"
+            tools:text="@string/discountAmt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/totalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:text="@string/totalText"
+            android:textSize="30sp"
+            tools:text="@string/totalText" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:textSize="30sp"
+            tools:text="@string/total" />
+    </LinearLayout>
+
+</LinearLayout>
